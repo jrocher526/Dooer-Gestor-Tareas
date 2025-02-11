@@ -205,7 +205,6 @@ body {
     flex: 1;
     padding: 1rem;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.8);
   }
   
   /* Barra "intermedia" donde está el título (Trabajo) y los botones */
