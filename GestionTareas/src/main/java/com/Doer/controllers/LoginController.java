@@ -28,7 +28,7 @@ public class LoginController {
         Usuario usuario = usuarioService.findByUsername(username);
 
         if (usuario != null && usuario.getContraseña().equals(password)) {
-            return "redirect:/home";  
+            return "redirect:/tablero";  
         } else {
             model.addAttribute("error", "Usuario o contraseña incorrectos");
             return "login";  
@@ -36,8 +36,8 @@ public class LoginController {
     }
 
     
-    @GetMapping("/home")
+    @GetMapping("/tablero")
     public String mostrarHome() {
-        return "home";  
+        return "tablero";  
     }
 }
