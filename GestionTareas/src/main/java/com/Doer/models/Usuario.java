@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "usuarios")			// Especifica el nombre de la tabla en la BD
 public class Usuario {
 
-	@Id  						 										 // Marca este campo como clave primaria en la tabla
+	@Id						 										 // Marca este campo como clave primaria en la tabla
     @GeneratedValue(strategy = GenerationType.IDENTITY)  				// Genera el valor unico de manera autoincremental
     private long id;					  // Este campo se almacenara en la columna "id" de la tabla usuarios
     private String username;			 // Este campo se almacenara en la columna "username" de la tabla usuarios
