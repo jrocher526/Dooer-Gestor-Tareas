@@ -13,13 +13,13 @@ public class LoginController {
     @Autowired
     private UsuarioService usuarioService;
 
-    // ✅ 1. Mostrar la página de login
+    // Mostrar la página de login
     @GetMapping("/login")
     public String mostrarLoginForm() {
         return "login";  
     }
 
-    // ✅ 2. Procesar la información del formulario de login
+    // Procesar la información del formulario de login
     @PostMapping("/login")
     public String procesarLogin(@RequestParam("username") String username,
                                 @RequestParam("password") String password, 
