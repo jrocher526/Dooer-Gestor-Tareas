@@ -14,26 +14,12 @@ public class LoginController {
     private UsuarioService usuarioService;
 
     // Mostrar la página de login
-    @GetMapping("/login")
-    public String mostrarLoginForm() {
-        return "login";  
+    @GetMapping("/inicio")
+    public String mostrarInicioForm() {
+        return "inicio";  
     }
 
-    // Procesar la información del formulario de login
-    @PostMapping("/login")
-    public String procesarLogin(@RequestParam("username") String username,
-                                @RequestParam("password") String password, 
-                                Model model) {
-
-        Usuario usuario = usuarioService.findByUsername(username);
-
-        if (usuario != null && usuario.getContraseña().equals(password)) {
-            return "redirect:/tablero";  
-        } else {
-            model.addAttribute("error", "Usuario o contraseña incorrectos");
-            return "login";  
-        }
-    }
+   
 
     
     @GetMapping("/tablero")
